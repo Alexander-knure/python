@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>Новое сообщение</h1><br>
+    <form method="POST" class="form-group">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success" style="width: 350px;">Сохранить</button>
+    </form>
+{% endblock %}

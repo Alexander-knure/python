@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% if user.is_authenticated %}
+     <a class="addText" href="{% url 'post_edit' pk=post.pk %}"></a>
+{% endif %}
+
+{% block content %}
+    <div class="post">
+    
+        {% if post.published_date %}
+            <div class="date"></div>
+        {% endif %}
+        
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+       <div class="date">{{ post.published_date }}</div>
+    </div>
+{% endblock %}
