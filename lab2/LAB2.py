@@ -421,7 +421,6 @@ class Laptop(EVM):
             self.__DisplayType = DisplayType
             self.__isDisplaySensory =isDisplaySensory
 
-
     def setExtra(self,isFrontCam,isKeyboardBacklight, isNumPad):
         self.__isFrontCam = isFrontCam 
         self.__isKeyboardBacklight = isKeyboardBacklight 
